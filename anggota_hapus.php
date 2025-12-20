@@ -1,0 +1,12 @@
+<?php
+include 'koneksi.php';
+$id = $_GET['id'];
+$query = mysqli_query($koneksi, "DELETE FROM anggota WHERE id_anggota=$id");
+if ($query) {
+	echo '<script>alert("Data berhasil di hapus."); location.href="anggota.php";</script>';
+}else{
+		echo '<script>alert("Data gagal di hapus."); location.href="anggota.php";</script>';
+
+}
+
+?>
